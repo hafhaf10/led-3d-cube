@@ -20,12 +20,12 @@ const scale = 0.2;
 let index = 0;
 const center = (scale * size) / 2;
 for (let z = 0; z < size; z++) {
-  for (let y = 0; y < size; y++) {
+  for (let y = 0; y < size+2; y++) {
     for (let x = 0; x < size; x++) {
       const led = document.createElement('a-led');
       led.setAttribute('position', {
         x: x * scale - center,
-        y: y * scale - center,
+        y: y * scale+2 - center,
         z: z * scale - center,
       });
       root.appendChild(led);
